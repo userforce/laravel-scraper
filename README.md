@@ -8,7 +8,7 @@ Scrape web pages and structure results
 Require this package with Composer
 
 ```bash
-composer require rcrowe/twigbridge
+composer require userforce/scraper
 ```
 
 Register Scraper with Laravel. Open config/app.php and add ```UserForce\ScraperServiceProvider``` at the end of providers list
