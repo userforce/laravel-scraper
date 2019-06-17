@@ -1,5 +1,5 @@
 {
-    "name": "userforce/laravel-scraper",
+    "name": "userforce/scraper",
     "description": "Scrape web pages and structure results.",
     "keywords": ["laravel", "scraper"],
     "license": "MIT",
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "UserForce\\": "src/"
+            "UserForce\\Scraper\\": "src/"
         }
     }
 }

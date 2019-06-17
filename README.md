@@ -16,7 +16,7 @@ Register Scraper with Laravel. Open config/app.php and add ```UserForce\ScraperS
 ```php
 'providers' => [
     ...
-    UserForce\ScraperServiceProvider::class,
+    UserForce\Scraper\ScraperServiceProvider::class,
 ],
 ```
 
@@ -25,7 +25,7 @@ Then at the end of the aliases list in the same config/app.php add ```UserForce\
 ```php
 'aliases' => [
     ...
-    'Scraper' => UserForce\Facade\Scraper::class,
+    'Scraper' => UserForce\Scraper\Facade\Scraper::class,
 ],
 ```
 
