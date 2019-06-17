@@ -1,8 +1,8 @@
 Scrape web pages and structure results
 
-[![Latest Stable Version](https://poser.pugx.org/userforce/laravel-scraper/v/stable)](https://packagist.org/packages/userforce/laravel-scraper)
-[![Total Downloads](https://poser.pugx.org/userforce/laravel-scraper/downloads)](https://packagist.org/packages/userforce/laravel-scraper)
-[![composer.lock](https://poser.pugx.org/userforce/laravel-scraper/composerlock)](https://packagist.org/packages/userforce/laravel-scraper)
+[![Latest Stable Version](https://poser.pugx.org/userforce/scraper/v/stable)](https://packagist.org/packages/userforce/scraper)
+[![Total Downloads](https://poser.pugx.org/userforce/scraper/downloads)](https://packagist.org/packages/userforce/scraper)
+[![composer.lock](https://poser.pugx.org/userforce/scraper/composerlock)](https://packagist.org/packages/userforce/scraper)
 
 # Installation
 Require this package with Composer
