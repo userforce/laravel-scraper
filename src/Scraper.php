@@ -1,14 +1,30 @@
 <?php
 
+namespace UserForce\Scraper;
 
-namespace UserForce;
+use UserForce\Scraper\Contracts\ScraperContract;
+use UserForce\Scraper\Contracts\ResultContract;
+use UserForce\Scraper\Validator\InputValidator;
+use UserForce\Scraper\Validator\ConfigValidator;
 
-use GuzzleHttp\Client;
-
-class Scraper
+class Scraper implements ScraperContract
 {
-    public function scrape()
+    /**
+     * @param array $input
+     * @param array $config
+     * @return ResultContract
+     * @throws Exceptions\InputException
+     */
+    public function get(array $input, array $config = []): ResultContract
     {
-        return 'Test initialization 3';
+        $inputValidator = new InputValidator();
+        $configValidator = new ConfigValidator();
+
+
+        dump($inputValidator->validate($input)->isValid());
+
+        $result = [];
+
+        return new Result($result);
     }
 }

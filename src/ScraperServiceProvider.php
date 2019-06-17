@@ -1,7 +1,7 @@
 <?php
 
 
-namespace UserForce;
+namespace UserForce\Scraper;
 
 use Illuminate\Support\ServiceProvider;
 

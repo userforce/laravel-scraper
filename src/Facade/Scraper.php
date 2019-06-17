@@ -1,10 +1,10 @@
 <?php
 
 
-namespace UserForce\Facade;
+namespace UserForce\Scraper\Facade;
 
 use Illuminate\Support\Facades\Facade;
-use UserForce\ScraperServiceProvider;
+use UserForce\Scraper\ScraperServiceProvider;
 
 class Scraper extends Facade
 {
