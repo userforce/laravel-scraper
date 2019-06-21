@@ -65,7 +65,7 @@ $result = Scraper::find($config);
 $result->get();
 ```
 
-####Result:
+#### Result
 ```php
 array:1 [▼
   "ibmachine" => array:2 [▼
