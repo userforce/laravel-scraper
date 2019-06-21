@@ -8,5 +8,5 @@ interface ScraperContract
      * @param array $config
      * @return ResultContract
      */
-    public function get(array $input, array $config): ResultContract;
+    public function find(array $input, array $config): ResultContract;
 }
