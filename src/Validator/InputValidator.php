@@ -2,8 +2,6 @@
 
 namespace UserForce\Scraper\Validator;
 
-use UserForce\Scraper\Exceptions\InputException;
-
 class InputValidator extends Validator
 {
     const URL = 'url';
@@ -18,7 +16,6 @@ class InputValidator extends Validator
      * @param array $input
      * @param string $optionKey
      * @return Validator
-     * @throws InputException
      */
     public function validate(array $input, string $optionKey = ''): Validator
     {
@@ -37,7 +34,6 @@ class InputValidator extends Validator
      * @param array $data
      * @param string $key
      * @return bool
-     * @throws InputException
      */
     private function checkOption(array $data, string $key): bool
     {
@@ -51,7 +47,7 @@ class InputValidator extends Validator
      * @param array $data
      * @return bool
      */
-    private function hasRequired(array $data): bool
+    public static function hasRequired(array $data): bool
     {
         return !array_diff(InputValidator::REQUIRED_OPTIONS, array_keys($data));
     }
@@ -62,12 +58,11 @@ class InputValidator extends Validator
      * @param string $optionKey
      * @param string $item
      * @return bool
-     * @throws InputException
      */
     private function checkRegex($regex, string $optionKey, string $item = ''): bool
     {
         if (empty($regex)) {
-            throw new InputException("\"{$optionKey}...{$item}\" regular expression(s) must NOT be empty.");
+            $this->addError("\"{$optionKey}...{$item}\" regular expression(s) must NOT be empty.");
         };
 
         if (is_array($regex)) {

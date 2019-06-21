@@ -4,7 +4,7 @@ namespace UserForce\Scraper\Exceptions;
 
 use Exception;
 
-class InputException extends Exception
+class ScraperException extends Exception
 {
 
 }
