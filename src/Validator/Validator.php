@@ -27,8 +27,9 @@ class Validator implements ValidatorContract
     {
         if (empty($data)) {
             $this->addError('There is no available scraping definition.');
-            return $this;
         }
+
+        return $this;
     }
 
     /**
