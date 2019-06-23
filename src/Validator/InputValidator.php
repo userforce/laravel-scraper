@@ -1,11 +1,10 @@
 <?php
-
 namespace UserForce\Scraper\Validator;
 
 class InputValidator extends Validator
 {
     const URL = 'url';
-    const REGEX = 'find';
+    const REGEX = 'regex';
 
     const REQUIRED_OPTIONS = [
         InputValidator::URL,
@@ -23,7 +22,7 @@ class InputValidator extends Validator
             $this->checkOption($input, $optionKey);
         } else {
             foreach ($input as $key => $value) {
-                $this->validate($value, $key);
+                $this->validateNode($value, $key);
             }
         }
 
@@ -74,5 +73,19 @@ class InputValidator extends Validator
         }
 
         return is_string($regex);
+    }
+
+    /**
+     * @param $data
+     * @param string $key
+     * @return void
+     */
+    private function validateNode($data, string $key): void
+    {
+        if(is_array($data)) {
+            $this->validate($data, $key);
+        } else {
+            $this->addError("Node \"{$key}...{$data}\" must be an array.");
+        }
     }
 }
