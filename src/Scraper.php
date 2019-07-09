@@ -47,12 +47,8 @@ class Scraper implements ScraperContract
     {
         $this->validate($input, $config);
         if (!$this->result->hasErrors()) {
-            try {
-                $data = $this->retriever->get($input);
-                $this->result->setData($data);
-            } catch (GuzzleException $exception) {
-                $this->result->addErrors($exception->getMessage());
-            }
+            $data = $this->retriever->get($input);
+            $this->result->setData($data);
         }
 
         return $this->result;
